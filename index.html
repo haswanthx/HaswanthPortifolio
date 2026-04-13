@@ -335,10 +335,17 @@ body.clk #c-dot{width:5px;height:5px}
 @keyframes ground-pulse{0%,100%{opacity:.5}50%{opacity:1}}
 /* photo container float */
 .photo-img-wrap{
-  position:absolute;bottom:0;left:50%;
- transform:translate(-52%, 0);
-  width:300px;
-  animation:float-y 5s ease-in-out infinite;
+  position:absolute;
+  bottom:0;
+  left:50%;
+  transform:translate(-52%, 0); /* tweak if needed */
+  display:flex;
+  justify-content:center;
+}
+
+.photo-img-wrap img{
+  display:block;
+  margin:0 auto;
 }
 @keyframes float-y{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-20px)}}
 .photo-img-wrap img{
