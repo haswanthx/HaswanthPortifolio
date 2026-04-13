@@ -337,12 +337,23 @@ body.clk #c-dot{width:5px;height:5px}
 .photo-img-wrap{
   position:absolute;
   bottom:0;
-  left:50%;
-  transform:translate(-52%, 0); /* tweak if needed */
-  display:flex;
-  justify-content:center;
-}
+  right:0;          /* move to right side */
+  left:auto;        /* remove center logic */
+  transform:none;   /* remove translate */
+  
+  width:100%;
+  height:100%;
 
+  display:flex;
+  justify-content:flex-end; /* push image to right */
+  align-items:flex-end;
+}
+}
+.photo-img-wrap img{
+  height:100%;
+  width:auto;           /* keeps proportions */
+  object-fit:contain;   /* full image visible */
+}
 .photo-img-wrap img{
   display:block;
   margin:0 auto;
